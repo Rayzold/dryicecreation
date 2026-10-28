@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ── Dry Ice Creation tokens ───────────────────────────────
+   abyss   : deep cold night, the base
+   vapor   : raised surfaces, hairlines
+   glacier : secondary text, ice tint
+   frost   : primary text
+   ember   : the brand penguin orange — action & warmth only
+   ───────────────────────────────────────────────────────── */
+@theme {
+  --color-abyss: #061019;
+  --color-abyss-2: #0a1823;
+  --color-vapor: #14283a;
+  --color-vapor-2: #1e3a50;
+  --color-glacier: #8fb8c9;
+  --color-glacier-2: #b9d8e4;
+  --color-frost: #eaf5f9;
+  --color-ember: #ff7706;
+  --color-ember-2: #ff9a45;
+
+  --font-sans: "Geologica Variable", "Geologica", system-ui, sans-serif;
+
+  --ease-out-ice: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-abyss);
+    color: var(--color-frost);
+    font-family: var(--font-sans);
+    font-variation-settings: "SHRP" 0;
+    font-feature-settings: "kern", "liga";
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-ember);
+    color: var(--color-abyss);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ember);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Headlines "crystallise": Geologica's sharpness axis grows with size. */
+@utility display {
+  font-weight: 640;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  font-variation-settings: "SHRP" 70;
+  text-wrap: balance;
+}
+@utility heading {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  font-variation-settings: "SHRP" 40;
+  text-wrap: balance;
+}
+@utility num {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Frosted hairline used for structure (section edges, list rows) */
+@utility frost-line {
+  border-color: color-mix(in oklab, var(--color-glacier) 18%, transparent);
+}
+
+/* Static fog for inner pages (no WebGL there). */
+@utility fog-static {
+  background:
+    radial-gradient(60% 80% at 15% 100%, color-mix(in oklab, var(--color-glacier) 22%, transparent), transparent 70%),
+    radial-gradient(50% 70% at 85% 0%, color-mix(in oklab, var(--color-vapor-2) 70%, transparent), transparent 70%),
+    radial-gradient(30% 40% at 70% 90%, color-mix(in oklab, var(--color-ember) 10%, transparent), transparent 70%),
+    var(--color-abyss);
+}
+
+/* Long-form content migrated from WordPress */
+.prose-ice {
+  max-width: 68ch;
+  color: var(--color-glacier-2);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.prose-ice > * + * { margin-top: 1.1em; }
+.prose-ice h2,
+.prose-ice h3,
+.prose-ice h4 {
+  color: var(--color-frost);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  font-variation-settings: "SHRP" 35;
+  margin-top: 2em;
+  text-wrap: balance;
+}
+.prose-ice h2 { font-size: 1.75rem; }
+.prose-ice h3 { font-size: 1.35rem; }
+.prose-ice h4 { font-size: 1.125rem; }
+.prose-ice strong { color: var(--color-frost); font-weight: 600; }
+.prose-ice a {
+  color: var(--color-ember-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose-ice a:hover { color: var(--color-ember); }
+.prose-ice ul, .prose-ice ol { padding-left: 1.25em; }
+.prose-ice ul { list-style: none; }
+.prose-ice ul > li { position: relative; }
+.prose-ice ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.05em;
+  top: 0.72em;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  background: var(--color-glacier);
+}
+.prose-ice ol { list-style: decimal; }
+.prose-ice li + li { margin-top: 0.4em; }
+.prose-ice img {
+  border-radius: 14px;
+  margin-inline: auto;
+  max-height: 520px;
+  width: auto;
+  object-fit: cover;
+}
+.prose-ice figure figcaption { font-size: 0.85rem; color: var(--color-glacier); margin-top: 0.5em; text-align: center; }
+.prose-ice blockquote {
+  border-left: 2px solid var(--color-ember);
+  padding-left: 1.1em;
+  color: var(--color-frost);
+}
+.prose-ice table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.prose-ice th, .prose-ice td {
+  border-bottom: 1px solid color-mix(in oklab, var(--color-glacier) 18%, transparent);
+  padding: 0.6em 0.5em;
+  text-align: left;
+}
+.prose-ice iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border-radius: 14px; }

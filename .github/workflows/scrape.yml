@@ -1,11 +1,8 @@
 name: Scrape legacy WordPress site
 
+# One-off: already ran. Re-run manually from the Actions tab only if the old site changes.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/scrape/**'
-      - '.github/workflows/scrape.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
