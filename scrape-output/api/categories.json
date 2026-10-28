@@ -1,0 +1,362 @@
+[
+ {
+  "id": 516,
+  "count": 0,
+  "description": "",
+  "link": "https://dryicecreation.gr/logistic/",
+  "name": "Logistic",
+  "slug": "logistic",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/516",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=516"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "count": 0,
+  "description": "",
+  "link": "https://dryicecreation.gr/mobile/",
+  "name": "Mobile",
+  "slug": "mobile",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/14",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=14"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "count": 0,
+  "description": "",
+  "link": "https://dryicecreation.gr/networking/",
+  "name": "Networking",
+  "slug": "networking",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/15",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=15"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 613,
+  "count": 1,
+  "description": "",
+  "link": "https://dryicecreation.gr/promotion/",
+  "name": "Promotion",
+  "slug": "promotion",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/613",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=613"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 514,
+  "count": 0,
+  "description": "",
+  "link": "https://dryicecreation.gr/technology/",
+  "name": "Technology",
+  "slug": "technology",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/514",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=514"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1,
+  "count": 0,
+  "description": "",
+  "link": "https://dryicecreation.gr/uncategorized/",
+  "name": "Uncategorized",
+  "slug": "uncategorized",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/1",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=1"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 527,
+  "count": 5,
+  "description": "",
+  "link": "https://dryicecreation.gr/anakinosi/",
+  "name": "Ανακοίνωση",
+  "slug": "anakinosi",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/527",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=527"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 526,
+  "count": 4,
+  "description": "",
+  "link": "https://dryicecreation.gr/arthro/",
+  "name": "Άρθρο",
+  "slug": "arthro",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories/526",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/posts?categories=526"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

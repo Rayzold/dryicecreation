@@ -1,0 +1,3843 @@
+[
+ {
+  "id": 9026,
+  "date": "2024-10-10T16:36:50",
+  "date_gmt": "2024-10-10T14:36:50",
+  "guid": {
+   "rendered": "https://dryicecreation.gr/?page_id=9026"
+  },
+  "modified": "2024-10-10T16:48:06",
+  "modified_gmt": "2024-10-10T14:48:06",
+  "slug": "privacy-policy",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/privacy-policy/",
+  "title": {
+   "rendered": "Πολιτική απορρήτου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-9026",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/9026",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=9026"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/9026/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=9026"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8997,
+  "date": "2024-10-09T15:48:58",
+  "date_gmt": "2024-10-09T13:48:58",
+  "guid": {
+   "rendered": "https://dryicecreation.gr/?page_id=8997"
+  },
+  "modified": "2024-10-10T16:54:51",
+  "modified_gmt": "2024-10-10T14:54:51",
+  "slug": "oookie-policy",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/oookie-policy/",
+  "title": {
+   "rendered": "Πολιτική για τα cookies"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-8997",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/8997",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=8997"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/8997/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=8997"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8542,
+  "date": "2021-06-20T15:46:19",
+  "date_gmt": "2021-06-20T13:46:19",
+  "guid": {
+   "rendered": "https://dryicecreation.gr/?page_id=8542"
+  },
+  "modified": "2021-06-20T16:29:11",
+  "modified_gmt": "2021-06-20T14:29:11",
+  "slug": "test-2",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/test-2/",
+  "title": {
+   "rendered": "Test"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-8542",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/8542",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=8542"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/8542/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=8542"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7084,
+  "date": "2018-05-14T15:17:21",
+  "date_gmt": "2018-05-14T13:17:21",
+  "guid": {
+   "rendered": "https://dryicecreation.gr/?page_id=7084"
+  },
+  "modified": "2024-10-10T16:48:40",
+  "modified_gmt": "2024-10-10T14:48:40",
+  "slug": "terms-of-use",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/terms-of-use/",
+  "title": {
+   "rendered": "&#8216;Οροι Χρήσης"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-7084",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/7084",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=7084"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/7084/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=7084"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 5464,
+  "date": "2017-11-13T16:20:12",
+  "date_gmt": "2017-11-13T14:20:12",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=5464"
+  },
+  "modified": "2021-01-24T01:11:43",
+  "modified_gmt": "2021-01-23T23:11:43",
+  "slug": "viomichania-trofimon",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/viomichania-trofimon/",
+  "title": {
+   "rendered": "Χρήση του ξηρού πάγου στη βιομηχανία τροφίμων"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5772,
+  "parent": 3176,
+  "menu_order": 6,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-5464",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/5464",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=5464"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/5464/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5772"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=5464"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4933,
+  "date": "2017-10-25T17:42:01",
+  "date_gmt": "2017-10-25T15:42:01",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4933"
+  },
+  "modified": "2021-07-02T01:37:32",
+  "modified_gmt": "2021-07-01T23:37:32",
+  "slug": "katharismos-apolymansi-me-pagovoli",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/katharismos-apolymansi-me-pagovoli/",
+  "title": {
+   "rendered": "Καθαρισμός &#038; απολύμανση με παγοβολή"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4933",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4933",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4933"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4933/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4933"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4902,
+  "date": "2017-10-25T14:51:47",
+  "date_gmt": "2017-10-25T12:51:47",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4902"
+  },
+  "modified": "2017-10-25T14:52:26",
+  "modified_gmt": "2017-10-25T12:52:26",
+  "slug": "anakoinwseis",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/anakoinwseis/",
+  "title": {
+   "rendered": "Ανακοινώσεις"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4902",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4902",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4902"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4902/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4902"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4900,
+  "date": "2017-10-25T14:43:15",
+  "date_gmt": "2017-10-25T12:43:15",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4900"
+  },
+  "modified": "2017-10-25T14:43:15",
+  "modified_gmt": "2017-10-25T12:43:15",
+  "slug": "arthra",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/arthra/",
+  "title": {
+   "rendered": "Άρθρα"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4900",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4900",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4900"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4900/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4900"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4254,
+  "date": "2017-10-07T15:28:13",
+  "date_gmt": "2017-10-07T13:28:13",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4254"
+  },
+  "modified": "2020-09-08T16:36:10",
+  "modified_gmt": "2020-09-08T14:36:10",
+  "slug": "oplo-comfetti",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/oplo-comfetti/",
+  "title": {
+   "rendered": "&#8216;Οπλο κομφετί &#8211; Comfetti gun"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 9,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4254",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4254",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4254"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4254/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4254"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4252,
+  "date": "2017-10-07T15:26:04",
+  "date_gmt": "2017-10-07T13:26:04",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4252"
+  },
+  "modified": "2021-02-21T01:59:15",
+  "modified_gmt": "2021-02-20T23:59:15",
+  "slug": "oplo-dioxidiou-co2-gun",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/oplo-dioxidiou-co2-gun/",
+  "title": {
+   "rendered": "&#8216;Οπλο διοξειδίου (CO2 Gun) για εφέ καπνού"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5980,
+  "parent": 0,
+  "menu_order": 8,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4252",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4252",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4252"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4252/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5980"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4252"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4208,
+  "date": "2017-10-06T14:46:11",
+  "date_gmt": "2017-10-06T12:46:11",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4208"
+  },
+  "modified": "2022-07-19T20:45:20",
+  "modified_gmt": "2022-07-19T18:45:20",
+  "slug": "dianomi-xirou-pagou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/dianomi-xirou-pagou/",
+  "title": {
+   "rendered": "Διανομή ξηρού πάγου σε όλη την Ελλάδα"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 1,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4208",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4208",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4208"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4208/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4208"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4155,
+  "date": "2017-10-02T20:39:45",
+  "date_gmt": "2017-10-02T18:39:45",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=4155"
+  },
+  "modified": "2021-01-22T16:36:06",
+  "modified_gmt": "2021-01-22T14:36:06",
+  "slug": "nea",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/nea/",
+  "title": {
+   "rendered": "Τα νέα μας"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-4155",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4155",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=4155"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/4155/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=4155"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3941,
+  "date": "2017-09-30T15:29:43",
+  "date_gmt": "2017-09-30T13:29:43",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3941"
+  },
+  "modified": "2019-12-14T01:09:45",
+  "modified_gmt": "2019-12-13T23:09:45",
+  "slug": "sychnes-erotisis",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/sychnes-erotisis/",
+  "title": {
+   "rendered": "Συχνές ερωτήσεις για τον ξηρό πάγο"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3941",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3941",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3941"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3941/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3941"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3916,
+  "date": "2017-09-29T15:19:54",
+  "date_gmt": "2017-09-29T13:19:54",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3916"
+  },
+  "modified": "2021-01-24T01:12:01",
+  "modified_gmt": "2021-01-23T23:12:01",
+  "slug": "inopiia",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/inopiia/",
+  "title": {
+   "rendered": "Χρήση του ξηρού πάγου στην Οινοποιία"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 3641,
+  "parent": 3176,
+  "menu_order": 4,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3916",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3916",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3916"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3916/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/3641"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3916"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3912,
+  "date": "2017-09-29T15:09:08",
+  "date_gmt": "2017-09-29T13:09:08",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3912"
+  },
+  "modified": "2021-12-28T00:57:48",
+  "modified_gmt": "2021-12-27T22:57:48",
+  "slug": "theatra-tileoptikes-paragoges-ekdilosis",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/theatra-tileoptikes-paragoges-ekdilosis/",
+  "title": {
+   "rendered": "Θέατρα &#8211; Τηλεοπτικές παραγωγές &#8211; Εκδηλώσεις"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5545,
+  "parent": 3176,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3912",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3912",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3912"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3912/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5545"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3912"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3908,
+  "date": "2017-09-29T15:03:58",
+  "date_gmt": "2017-09-29T13:03:58",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3908"
+  },
+  "modified": "2021-01-24T00:58:04",
+  "modified_gmt": "2021-01-23T22:58:04",
+  "slug": "katharismos-tichon-epifanion-pagovoli-xirou-pagou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/katharismos-tichon-epifanion-pagovoli-xirou-pagou/",
+  "title": {
+   "rendered": "Καθαρισμός τοίχων &#038; επιφανειών με παγοβολή"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 4773,
+  "parent": 3176,
+  "menu_order": 2,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3908",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3908",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3908"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3908/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/4773"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3908"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3904,
+  "date": "2017-09-29T14:55:51",
+  "date_gmt": "2017-09-29T12:55:51",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3904"
+  },
+  "modified": "2021-01-27T01:08:58",
+  "modified_gmt": "2021-01-26T23:08:58",
+  "slug": "xenodochia-estiatoria-cafe-ho-re-ca",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/xenodochia-estiatoria-cafe-ho-re-ca/",
+  "title": {
+   "rendered": "Ο ξηρός πάγος σε Ξενοδοχεία &#8211; Εστιατόρια &#8211; Café"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 3619,
+  "parent": 3176,
+  "menu_order": 1,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3904",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3904",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3904"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3904/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/3619"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3904"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3898,
+  "date": "2017-09-29T14:44:01",
+  "date_gmt": "2017-09-29T12:44:01",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3898"
+  },
+  "modified": "2021-01-27T01:02:08",
+  "modified_gmt": "2021-01-26T23:02:08",
+  "slug": "metafores",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/metafores/",
+  "title": {
+   "rendered": "Χρήση του ξηρού πάγου στις μεταφορές προϊόντων"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 4012,
+  "parent": 3176,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3898",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3898",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3898"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3898/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/4012"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3898"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3829,
+  "date": "2017-09-27T17:37:42",
+  "date_gmt": "2017-09-27T15:37:42",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3829"
+  },
+  "modified": "2022-07-07T13:28:05",
+  "modified_gmt": "2022-07-07T11:28:05",
+  "slug": "ti-ine-o-xiros-pagos",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/ti-ine-o-xiros-pagos/",
+  "title": {
+   "rendered": "Τι είναι ο ξηρός πάγος και ποιές οι κύριες χρήσεις του"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 3834,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "open",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3829",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3829",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3829"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3829/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/3834"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3829"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3702,
+  "date": "2017-09-25T13:25:10",
+  "date_gmt": "2017-09-25T11:25:10",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3702"
+  },
+  "modified": "2021-11-06T18:32:42",
+  "modified_gmt": "2021-11-06T16:32:42",
+  "slug": "parangelies-dianomes-ypiresies",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/parangelies-dianomes-ypiresies/",
+  "title": {
+   "rendered": "Παραγγελίες &#8211; Διανομές &#8211; Υπηρεσίες"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5356,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "open",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3702",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3702",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3702"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3702/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5356"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3702"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3546,
+  "date": "2017-09-20T17:44:33",
+  "date_gmt": "2017-09-20T15:44:33",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3546"
+  },
+  "modified": "2020-06-02T15:43:47",
+  "modified_gmt": "2020-06-02T13:43:47",
+  "slug": "michanes-pagovolis-asco",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/michanes-pagovolis-asco/",
+  "title": {
+   "rendered": "Μηχανές παγοβολής ξηρού πάγου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5963,
+  "parent": 0,
+  "menu_order": 8,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3546",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3546",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3546"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3546/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5963"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3546"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3544,
+  "date": "2017-09-20T17:43:00",
+  "date_gmt": "2017-09-20T15:43:00",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3544"
+  },
+  "modified": "2024-09-24T12:07:00",
+  "modified_gmt": "2024-09-24T10:07:00",
+  "slug": "docheia-metaforas-amp-apothikeysis-ygrou-azotou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/docheia-metaforas-amp-apothikeysis-ygrou-azotou/",
+  "title": {
+   "rendered": "Δοχεία μεταφοράς &#038; αποθήκευσης υγρού αζώτου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 7629,
+  "parent": 0,
+  "menu_order": 7,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3544",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3544",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3544"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3544/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/7629"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3544"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3528,
+  "date": "2017-09-20T17:07:30",
+  "date_gmt": "2017-09-20T15:07:30",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3528"
+  },
+  "modified": "2022-05-12T15:51:58",
+  "modified_gmt": "2022-05-12T13:51:58",
+  "slug": "michanes-paragogis-efe-kapnou-xirou-pagou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/michanes-paragogis-efe-kapnou-xirou-pagou/",
+  "title": {
+   "rendered": "Μηχανές παραγωγής εφέ καπνού ξηρού πάγου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5897,
+  "parent": 0,
+  "menu_order": 4,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3528",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3528",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3528"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3528/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5897"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3528"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3477,
+  "date": "2017-09-17T22:11:01",
+  "date_gmt": "2017-09-17T20:11:01",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3477"
+  },
+  "modified": "2026-04-14T10:36:11",
+  "modified_gmt": "2026-04-14T08:36:11",
+  "slug": "mistystix",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/mistystix/",
+  "title": {
+   "rendered": "MistyStix για να φτιάξεις εντυπωσιακά Cocktails"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 6801,
+  "parent": 0,
+  "menu_order": 1,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3477",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3477",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3477"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3477/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/6801"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3477"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3251,
+  "date": "2017-09-05T23:56:47",
+  "date_gmt": "2017-09-05T21:56:47",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3251"
+  },
+  "modified": "2023-10-19T00:10:41",
+  "modified_gmt": "2023-10-18T22:10:41",
+  "slug": "gallery",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/gallery/",
+  "title": {
+   "rendered": "Gallery"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3251",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3251",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3251"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3251/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3251"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3238,
+  "date": "2017-09-05T23:44:08",
+  "date_gmt": "2017-09-05T21:44:08",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3238"
+  },
+  "modified": "2025-10-24T13:52:43",
+  "modified_gmt": "2025-10-24T11:52:43",
+  "slug": "anasyskeyasia-metafores-dry-ice-courier",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/anasyskeyasia-metafores-dry-ice-courier/",
+  "title": {
+   "rendered": "Ανασυσκευασία &#8211; Αεροπορικές μεταφορές κατεψυγμένων"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 1,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3238",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3238",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3238"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3238/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3238"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3239,
+  "date": "2017-09-05T23:43:39",
+  "date_gmt": "2017-09-05T21:43:39",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3239"
+  },
+  "modified": "2020-09-08T16:30:10",
+  "modified_gmt": "2020-09-08T14:30:10",
+  "slug": "paragogi-efe-kapnou-omichlis-comfetti",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/paragogi-efe-kapnou-omichlis-comfetti/",
+  "title": {
+   "rendered": "Παραγωγή εφέ καπνού, ομίχλης &#038; comfetti"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 4,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3239",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3239",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3239"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3239/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3239"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3236,
+  "date": "2017-09-05T23:35:43",
+  "date_gmt": "2017-09-05T21:35:43",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3236"
+  },
+  "modified": "2025-10-24T13:45:28",
+  "modified_gmt": "2025-10-24T11:45:28",
+  "slug": "dry-ice-courier-apostoles-paradoseis-exoterikoy",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/dry-ice-courier-apostoles-paradoseis-exoterikoy/",
+  "title": {
+   "rendered": "Αποστολές &#8211; Παραδόσεις εξωτερικού σε ψύξη ή κατάψυξη;"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5216,
+  "parent": 0,
+  "menu_order": 2,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3236",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3236",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3236"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3236/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3236"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3223,
+  "date": "2017-09-05T23:20:29",
+  "date_gmt": "2017-09-05T21:20:29",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3223"
+  },
+  "modified": "2021-01-24T01:10:16",
+  "modified_gmt": "2021-01-23T23:10:16",
+  "slug": "farmako-viomichania",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/farmako-viomichania/",
+  "title": {
+   "rendered": "Χρήση του ξηρού πάγου στη Φαρμακο-βιομηχανία"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 6257,
+  "parent": 3176,
+  "menu_order": 5,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3223",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3223",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3223"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3223/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/6257"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3223"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3222,
+  "date": "2017-09-05T23:18:55",
+  "date_gmt": "2017-09-05T21:18:55",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3222"
+  },
+  "modified": "2017-09-20T17:37:30",
+  "modified_gmt": "2017-09-20T15:37:30",
+  "slug": "dry-ice-blasting",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/dry-ice-blasting/",
+  "title": {
+   "rendered": "Παγοβολή"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 3176,
+  "menu_order": 2,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3222",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3222",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3222"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3222/revisions"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3222"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3199,
+  "date": "2017-09-05T17:55:32",
+  "date_gmt": "2017-09-05T15:55:32",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3199"
+  },
+  "modified": "2024-09-24T12:01:14",
+  "modified_gmt": "2024-09-24T10:01:14",
+  "slug": "dioxidio-tou-anthraka-co2",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/dioxidio-tou-anthraka-co2/",
+  "title": {
+   "rendered": "Διοξείδιο του άνθρακα &#8211; CO2 | Αγορά"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 4607,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3199",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3199",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3199"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3199/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/4607"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3199"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3196,
+  "date": "2017-09-05T17:53:53",
+  "date_gmt": "2017-09-05T15:53:53",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3196"
+  },
+  "modified": "2020-12-03T14:11:11",
+  "modified_gmt": "2020-12-03T12:11:11",
+  "slug": "michanes-paragogis-xirou-pagou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/michanes-paragogis-xirou-pagou/",
+  "title": {
+   "rendered": "Μηχανές παραγωγής ξηρού πάγου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 5822,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3196",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3196",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3196"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3196/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/5822"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3196"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3176,
+  "date": "2017-09-05T17:18:53",
+  "date_gmt": "2017-09-05T15:18:53",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3176"
+  },
+  "modified": "2021-01-24T00:57:34",
+  "modified_gmt": "2021-01-23T22:57:34",
+  "slug": "efarmoges-xirou-pagou-dioxidiou",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/efarmoges-xirou-pagou-dioxidiou/",
+  "title": {
+   "rendered": "Εφαρμογές ξηρού πάγου &#038; Διοξειδίου"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 1,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3176",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3176"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3176/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3176"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3113,
+  "date": "2017-09-03T21:25:16",
+  "date_gmt": "2017-09-03T19:25:16",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3113"
+  },
+  "modified": "2022-07-25T16:51:26",
+  "modified_gmt": "2022-07-25T14:51:26",
+  "slug": "ygro-azoto",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/ygro-azoto/",
+  "title": {
+   "rendered": "Υγρό άζωτο | Αγορά &#038; Διανομή"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 2,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3113",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3113",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3113"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3113/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3113"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3110,
+  "date": "2017-09-03T21:16:38",
+  "date_gmt": "2017-09-03T19:16:38",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3110"
+  },
+  "modified": "2020-09-09T01:06:19",
+  "modified_gmt": "2020-09-08T23:06:19",
+  "slug": "kanones-asfalias",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/kanones-asfalias/",
+  "title": {
+   "rendered": "Κανόνες ασφαλείας για τον ξηρό πάγο"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 3,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3110",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3110",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3110"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3110/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3110"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3099,
+  "date": "2017-09-03T17:07:06",
+  "date_gmt": "2017-09-03T15:07:06",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3099"
+  },
+  "modified": "2018-09-20T23:30:59",
+  "modified_gmt": "2018-09-20T21:30:59",
+  "slug": "i-poria-mas",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/i-poria-mas/",
+  "title": {
+   "rendered": "Η πορεία μας"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3099",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3099",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3099"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3099/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3099"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3097,
+  "date": "2017-09-03T17:02:06",
+  "date_gmt": "2017-09-03T15:02:06",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3097"
+  },
+  "modified": "2019-12-11T13:06:40",
+  "modified_gmt": "2019-12-11T11:06:40",
+  "slug": "about-dry-ice-creation",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/about-dry-ice-creation/",
+  "title": {
+   "rendered": "Ποιοί είμαστε"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 4258,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3097",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3097",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3097"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3097/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/4258"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3097"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 3085,
+  "date": "2017-09-02T16:44:18",
+  "date_gmt": "2017-09-02T14:44:18",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=3085"
+  },
+  "modified": "2025-09-30T12:42:08",
+  "modified_gmt": "2025-09-30T10:42:08",
+  "slug": "epikinonise-mazi-mas",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/epikinonise-mazi-mas/",
+  "title": {
+   "rendered": "Επικοινώνησε μαζί μας"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-3085",
+   "page",
+   "type-page",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3085",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=3085"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/3085/revisions"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=3085"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2415,
+  "date": "2015-08-24T14:19:22",
+  "date_gmt": "2015-08-24T14:19:22",
+  "guid": {
+   "rendered": "http://21387537631.thesite.link/?page_id=2415"
+  },
+  "modified": "2026-04-14T18:40:23",
+  "modified_gmt": "2026-04-14T16:40:23",
+  "slug": "xiros-pagos-dioxidio-tou-anthraka-co2",
+  "status": "publish",
+  "type": "page",
+  "link": "https://dryicecreation.gr/",
+  "title": {
+   "rendered": "Ξηρός πάγος &#038; Διοξείδιο του άνθρακα CO2"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 2969,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+   "footnotes": ""
+  },
+  "class_list": [
+   "post-2415",
+   "page",
+   "type-page",
+   "status-publish",
+   "has-post-thumbnail",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/2415",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/types/page"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/comments?post=2415"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 0,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/pages/2415/revisions"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media/2969"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://dryicecreation.gr/wp-json/wp/v2/media?parent=2415"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]
