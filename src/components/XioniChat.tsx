@@ -125,8 +125,8 @@ export function XioniChat() {
         aria-expanded={open}
         className="flex items-center gap-2 rounded-full bg-ember px-5 py-3 font-semibold text-abyss shadow-xl hover:bg-ember-2"
       >
-        <Icon name={open ? "close" : "mail"} size={18} />
-        {open ? "Κλείσιμο" : "Ρωτήστε τη Χιόνη"}
+        <Icon name={open ? "close" : "snowflake"} size={18} />
+        {open ? "Κλείσιμο" : "Ρωτήστε μας ζωντανά"}
       </button>
     </div>
   );

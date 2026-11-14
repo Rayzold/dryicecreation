@@ -16,6 +16,7 @@ import {
   NewTwitterIcon,
   Tick02Icon,
   Navigation03Icon,
+  SnowflakeIcon,
 } from "@hugeicons/core-free-icons";
 
 const icons = {
@@ -35,6 +36,7 @@ const icons = {
   x: NewTwitterIcon,
   tick: Tick02Icon,
   directions: Navigation03Icon,
+  snowflake: SnowflakeIcon,
 };
 
 export type IconName = keyof typeof icons;
