@@ -1,0 +1,11 @@
+name = "xioni-dryicecreation"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ALLOWED_ORIGINS = "https://rayzold.github.io,http://localhost:3000"
+# MODEL = "claude-haiku-5-5"   # φθηνότερη επιλογή· προεπιλογή claude-opus-5-5 με effort low
+
+# Το key ΔΕΝ μπαίνει εδώ: npx wrangler secret put ANTHROPIC_API_KEY
+# Χωρίς key ο Worker τρέχει σε demo mode.

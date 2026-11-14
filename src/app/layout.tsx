@@ -3,6 +3,7 @@ import "@fontsource-variable/geologica/full.css";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { XioniChat } from "@/components/XioniChat";
 import { business, SITE_URL } from "@/lib/site";
 import { asset } from "@/lib/asset";
 
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <XioniChat />
       </body>
     </html>
   );
