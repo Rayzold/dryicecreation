@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { business } from "@/lib/site";
+import { asset } from "@/lib/asset";
 import { Icon } from "./Icon";
 
 // Η Χιόνη: παράθυρο κουβέντας κάτω δεξιά. Εμφανίζεται μόνο αν οριστεί στο build
@@ -67,9 +68,13 @@ export function XioniChat() {
           className="flex h-[min(560px,75dvh)] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border frost-line bg-abyss-2 shadow-2xl"
         >
           <header className="flex items-center justify-between border-b frost-line bg-vapor/60 px-4 py-3">
-            <div>
-              <p className="heading text-lg leading-tight">Χιόνη</p>
-              <p className="text-xs text-glacier">Ψηφιακή βοηθός · απαντά όλο το 24ωρο</p>
+            <div className="flex items-center gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+              <img src={asset("/xioni-avatar.webp")} alt="" width={40} height={40} className="size-10 rounded-full ring-2 ring-ember" />
+              <div>
+                <p className="heading text-lg leading-tight">Χιόνη</p>
+                <p className="text-xs text-glacier">Ψηφιακή βοηθός · απαντά όλο το 24ωρο</p>
+              </div>
             </div>
             <button type="button" onClick={() => setOpen(false)} aria-label="Κλείσιμο" className="rounded-full p-2 text-glacier-2 hover:bg-vapor-2">
               <Icon name="close" size={18} />
@@ -77,18 +82,19 @@ export function XioniChat() {
           </header>
 
           <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
-            {turns.map((t, i) => (
-              <p
-                key={i}
-                className={
-                  t.role === "user"
-                    ? "ml-8 rounded-2xl rounded-br-sm bg-ember px-3 py-2 text-sm text-abyss"
-                    : "mr-8 rounded-2xl rounded-bl-sm bg-vapor px-3 py-2 text-sm text-frost"
-                }
-              >
-                {t.text}
-              </p>
-            ))}
+            {turns.map((t, i) =>
+              t.role === "user" ? (
+                <p key={i} className="ml-8 rounded-2xl rounded-br-sm bg-ember px-3 py-2 text-sm text-abyss">
+                  {t.text}
+                </p>
+              ) : (
+                <div key={i} className="mr-6 flex items-end gap-2">
+                  {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+                  <img src={asset("/xioni-avatar.webp")} alt="" width={24} height={24} className="size-6 shrink-0 rounded-full" />
+                  <p className="min-w-0 rounded-2xl rounded-bl-sm bg-vapor px-3 py-2 text-sm text-frost">{t.text}</p>
+                </div>
+              ),
+            )}
             {busy && <p className="mr-8 w-fit rounded-2xl bg-vapor px-3 py-2 text-sm text-glacier">Η Χιόνη γράφει…</p>}
             {quote && (
               <div className="rounded-xl border frost-line bg-vapor/40 p-3 text-sm" role="status">
