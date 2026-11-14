@@ -29,6 +29,7 @@ jobs:
           # Served at https://<user>.github.io/dryicecreation/ — remove when moving to dryicecreation.gr
           NEXT_PUBLIC_BASE_PATH: /dryicecreation
           NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
+          NEXT_PUBLIC_XIONI_URL: https://xioni-dryicecreation.markos-stefanou.workers.dev
           NEXT_TELEMETRY_DISABLED: 1
         run: npm run build
       - run: touch out/.nojekyll
