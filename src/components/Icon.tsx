@@ -17,6 +17,10 @@ import {
   Tick02Icon,
   Navigation03Icon,
   SnowflakeIcon,
+  Mic01Icon,
+  VolumeHighIcon,
+  VolumeMute01Icon,
+  StopIcon,
 } from "@hugeicons/core-free-icons";
 
 const icons = {
@@ -37,6 +41,10 @@ const icons = {
   tick: Tick02Icon,
   directions: Navigation03Icon,
   snowflake: SnowflakeIcon,
+  mic: Mic01Icon,
+  volume: VolumeHighIcon,
+  mute: VolumeMute01Icon,
+  stop: StopIcon,
 };
 
 export type IconName = keyof typeof icons;

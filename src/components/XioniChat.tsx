@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { business } from "@/lib/site";
 import { asset } from "@/lib/asset";
 import { Icon } from "./Icon";
+import { useXioniVoice } from "./useXioniVoice";
 
 // Η Χιόνη: παράθυρο κουβέντας κάτω δεξιά. Εμφανίζεται μόνο αν οριστεί στο build
 // NEXT_PUBLIC_XIONI_URL=https://xioni-dryicecreation.<account>.workers.dev
@@ -24,16 +25,28 @@ export function XioniChat() {
   const [busy, setBusy] = useState(false);
   const [quote, setQuote] = useState<Quote | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
+  const voice = useXioniVoice();
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
-  }, [turns, busy, quote]);
+  }, [turns, busy, quote, voice.interim]);
 
   if (!URL_) return null;
 
-  async function send(e: React.FormEvent) {
+  function send(e: React.FormEvent) {
     e.preventDefault();
-    const text = input.trim().slice(0, 1500);
+    void sendText(input);
+  }
+
+  function close() {
+    voice.stopListening();
+    voice.stopSpeaking();
+    setOpen(false);
+  }
+
+  // spoken: ήρθε από το μικρόφωνο, άρα η απάντηση ακούγεται ακόμα κι αν το state της φωνής δεν έχει ενημερωθεί.
+  async function sendText(raw: string, spoken = false) {
+    const text = raw.trim().slice(0, 1500);
     if (!text || busy) return;
     const next: Turn[] = [...turns, { role: "user", text }];
     setTurns(next);
@@ -48,7 +61,9 @@ export function XioniChat() {
         body: JSON.stringify({ messages: history }),
       });
       const data = await res.json();
-      setTurns((t) => [...t, { role: "assistant", text: String(data.reply || "") }]);
+      const reply = String(data.reply || "");
+      setTurns((t) => [...t, { role: "assistant", text: reply }]);
+      if (spoken || voice.voiceOn) voice.speak(reply);
       if (data.quote) setQuote(data.quote);
     } catch {
       setTurns((t) => [
@@ -76,9 +91,27 @@ export function XioniChat() {
                 <p className="text-xs text-glacier">Ψηφιακή βοηθός · απαντά όλο το 24ωρο</p>
               </div>
             </div>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Κλείσιμο" className="rounded-full p-2 text-glacier-2 hover:bg-vapor-2">
-              <Icon name="close" size={18} />
-            </button>
+            <div className="flex items-center gap-1">
+              {voice.canSpeak && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (voice.voiceOn) voice.stopSpeaking();
+                    else voice.unlockAudio();
+                    voice.setVoiceOn(!voice.voiceOn);
+                  }}
+                  aria-pressed={voice.voiceOn}
+                  aria-label={voice.voiceOn ? "Η Χιόνη μιλάει: πατήστε για σίγαση" : "Να διαβάζει η Χιόνη τις απαντήσεις φωναχτά"}
+                  title={voice.voiceOn ? "Σίγαση" : "Φωνή"}
+                  className={`rounded-full p-2 hover:bg-vapor-2 ${voice.voiceOn ? "text-ember" : "text-glacier-2"}`}
+                >
+                  <Icon name={voice.voiceOn ? "volume" : "mute"} size={18} />
+                </button>
+              )}
+              <button type="button" onClick={close} aria-label="Κλείσιμο" className="rounded-full p-2 text-glacier-2 hover:bg-vapor-2">
+                <Icon name="close" size={18} />
+              </button>
+            </div>
           </header>
 
           <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
@@ -95,6 +128,13 @@ export function XioniChat() {
                 </div>
               ),
             )}
+            {voice.listening && (
+              <p className="ml-8 rounded-2xl rounded-br-sm border border-ember/60 px-3 py-2 text-sm text-frost">
+                <span className="mr-2 inline-block size-2 animate-pulse rounded-full bg-ember align-middle" aria-hidden="true" />
+                {voice.interim || "Σας ακούω…"}
+              </p>
+            )}
+            {voice.speaking && !busy && <p className="mr-8 w-fit rounded-2xl bg-vapor/60 px-3 py-1 text-xs text-glacier">Η Χιόνη μιλάει…</p>}
             {busy && <p className="mr-8 w-fit rounded-2xl bg-vapor px-3 py-2 text-sm text-glacier">Η Χιόνη γράφει…</p>}
             {quote && (
               <div className="rounded-xl border frost-line bg-vapor/40 p-3 text-sm" role="status">
@@ -113,9 +153,22 @@ export function XioniChat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               maxLength={1500}
-              placeholder="Γράψτε εδώ…"
+              placeholder={voice.canListen ? "Γράψτε ή πατήστε το μικρόφωνο…" : "Γράψτε εδώ…"}
               className="min-w-0 flex-1 rounded-full border frost-line bg-abyss px-4 py-2 text-sm text-frost placeholder:text-glacier/70 focus:outline-2 focus:outline-ember"
             />
+            {voice.canListen && (
+              <button
+                type="button"
+                onClick={() => (voice.listening ? voice.stopListening() : voice.startListening((t) => void sendText(t, true)))}
+                disabled={busy}
+                aria-pressed={voice.listening}
+                aria-label={voice.listening ? "Τέλος ομιλίας" : "Μιλήστε στη Χιόνη"}
+                title={voice.listening ? "Τέλος" : "Μιλήστε"}
+                className={`grid size-10 shrink-0 place-items-center rounded-full border frost-line disabled:opacity-50 ${voice.listening ? "animate-pulse bg-ember text-abyss" : "bg-abyss text-frost hover:bg-vapor-2"}`}
+              >
+                <Icon name={voice.listening ? "stop" : "mic"} size={18} />
+              </button>
+            )}
             <button type="submit" disabled={busy || !input.trim()} className="rounded-full bg-ember px-4 text-sm font-semibold text-abyss disabled:opacity-50">
               Αποστολή
             </button>
@@ -127,7 +180,7 @@ export function XioniChat() {
       )}
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => (open ? close() : setOpen(true))}
         aria-expanded={open}
         className="flex items-center gap-2 rounded-full bg-ember px-5 py-3 font-semibold text-abyss shadow-xl hover:bg-ember-2"
       >
