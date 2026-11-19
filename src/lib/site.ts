@@ -52,11 +52,11 @@ export type Item = {
 
 export const services: Item[] = [
   {
-    title: "Διανομή ξηρού πάγου",
-    short: "Pellets και blocks αρίστης ποιότητας στην πόρτα σου, αυθημερόν στην Αττική και σε όλη την Ελλάδα.",
-    href: "/dianomi-xirou-pagou/",
-    image: "/media/2017/10/Dry-Ice-Scoop.jpg",
-    tags: "Pellets 3 / 16 mm, Blocks, Αυθημερόν",
+    title: "Αποστολές στο εξωτερικό",
+    short: "Από την πόρτα σου μέχρι την πόρτα του παραλήπτη, σε κάθε χώρα, στη σωστή θερμοκρασία.",
+    href: "/dry-ice-courier-apostoles-paradoseis-exoterikoy/",
+    image: "/media/2017/09/Dry-Ice-For-Food.jpg",
+    tags: "Τρόφιμα, Δείγματα, Φάρμακα",
   },
   {
     title: "Ανασυσκευασία & μεταφορές",
@@ -66,11 +66,11 @@ export const services: Item[] = [
     tags: "Ψύξη, Κατάψυξη, Courier",
   },
   {
-    title: "Αποστολές στο εξωτερικό",
-    short: "Από την πόρτα σου μέχρι την πόρτα του παραλήπτη, σε κάθε χώρα, στη σωστή θερμοκρασία.",
-    href: "/dry-ice-courier-apostoles-paradoseis-exoterikoy/",
-    image: "/media/2017/09/Dry-Ice-For-Food.jpg",
-    tags: "Τρόφιμα, Δείγματα, Φάρμακα",
+    title: "Διανομή ξηρού πάγου",
+    short: "Pellets και blocks αρίστης ποιότητας στην πόρτα σου, αυθημερόν στην Αττική και σε όλη την Ελλάδα.",
+    href: "/dianomi-xirou-pagou/",
+    image: "/media/2017/10/Dry-Ice-Scoop.jpg",
+    tags: "Pellets 3 / 16 mm, Blocks, Αυθημερόν",
   },
   {
     title: "Καθαρισμός με παγοβολή",
@@ -88,7 +88,10 @@ export const services: Item[] = [
   },
 ];
 
-export const products: Item[] = [
+// MistyStix: ο ιδιοκτήτης είπε (19/11) ότι ένα προϊόν «δεν υπάρχει πλέον στην αγορά»· πιθανότατα αυτό. Κρυμμένο από τις λίστες μέχρι επιβεβαίωση.
+const HIDDEN_PRODUCTS = new Set(["/mistystix/"]);
+
+const allProducts: Item[] = [
   {
     title: "MistyStix",
     short: "Το stick ανάδευσης με ξηρό πάγο που βγάζει ομίχλη από το ποτήρι, με ασφάλεια.",
@@ -144,6 +147,8 @@ export const products: Item[] = [
     image: "/media/2017/11/test.jpg",
   },
 ];
+
+export const products: Item[] = allProducts.filter((p) => !HIDDEN_PRODUCTS.has(p.href));
 
 export const applications: Item[] = [
   {

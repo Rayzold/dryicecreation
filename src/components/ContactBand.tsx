@@ -62,15 +62,6 @@ export function ContactBand({ title = "Πες μας τι χρειάζεσαι",
             </div>
           </dl>
 
-          <a
-            href={business.app}
-            target="_blank"
-            rel="noopener"
-            className="mt-10 inline-flex items-center gap-3 rounded-full border frost-line px-5 py-3 text-sm text-glacier-2 transition hover:border-glacier/60 hover:text-frost"
-          >
-            <Icon name="external" size={16} />
-            Παραγγελίες και από την εφαρμογή μας για Android
-          </a>
         </div>
 
         <div className="rounded-[28px] border frost-line bg-abyss-2/80 p-6 backdrop-blur-md sm:p-10">

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { HeroFog } from "@/components/home/HeroFog";
-import { HeroTitle } from "@/components/home/HeroTitle";
-import { ServiceIndex } from "@/components/home/ServiceIndex";
+import { HeroSlides } from "@/components/home/HeroSlides";
+import { QuickBar } from "@/components/home/QuickBar";
+import { ServiceCards } from "@/components/home/ServiceCards";
 import { Stats } from "@/components/home/Stats";
 import { Section, SectionHead } from "@/components/Section";
 import { ContactBand } from "@/components/ContactBand";
@@ -13,62 +13,24 @@ import { posts } from "@/lib/content";
 import { asset } from "@/lib/asset";
 
 export default function Home() {
-  const [featured, ...rest] = products;
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-14 pt-32 sm:pb-20">
-        <HeroFog />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-abyss to-transparent" aria-hidden="true" />
-        <div className="relative mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div>
-              <HeroTitle text="Ξηρός πάγος, CO₂ και υγρό άζωτο. Κάθε μέρα, σε όλη την Ελλάδα." />
-              <p className="mt-7 max-w-[56ch] text-[1.1rem] leading-relaxed text-glacier-2 sm:text-[1.2rem]">
-                Παράγουμε και διανέμουμε ξηρό πάγο σε pellets και blocks, μεταφέρουμε ευαίσθητα προϊόντα σε ψύξη και κατάψυξη, καθαρίζουμε με
-                παγοβολή και γεμίζουμε σκηνές με χαμηλή ομίχλη.
-              </p>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href={`tel:${business.phones[0].tel}`}
-                  className="inline-flex items-center gap-2.5 rounded-full bg-ember px-6 py-4 font-medium text-abyss transition hover:bg-ember-2"
-                >
-                  <Icon name="phone" size={19} strokeWidth={2} />
-                  Κάλεσε <span className="num">{business.phones[0].display}</span>
-                </a>
-                <a
-                  href="#epikoinonia"
-                  className="inline-flex items-center gap-2 rounded-full border border-frost/25 bg-abyss/30 px-6 py-4 text-frost backdrop-blur-sm transition hover:border-frost/60"
-                >
-                  Ζήτα προσφορά
-                </a>
-              </div>
-            </div>
-            <p className="hidden text-right lg:block" aria-label="Η θερμοκρασία του ξηρού πάγου είναι μείον 78,5 βαθμοί Κελσίου">
-              <span className="display num block text-[4.2rem] font-[250] text-glacier-2/90" style={{ fontVariationSettings: '"SHRP" 100' }}>
-                −78,5°C
-              </span>
-              <span className="mt-1 block text-sm text-glacier">η θερμοκρασία του ξηρού πάγου</span>
-            </p>
-          </div>
-          <p className="mt-12 text-sm text-glacier lg:mt-16">
-            <span className="relative mr-2 inline-flex size-2 align-middle">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-ember opacity-60 motion-reduce:hidden" />
-              <span className="relative inline-flex size-2 rounded-full bg-ember" />
-            </span>
-            Αυθημερόν παράδοση σε όλη την Αττική.{" "}
-            <span className="hidden text-glacier/70 lg:[@media(pointer:fine)]:inline">Κούνησε τον κέρσορα για να ανακατέψεις την ομίχλη.</span>
-          </p>
-        </div>
-      </section>
+      {/* ── Hero: οι υπηρεσίες σε εναλλασσόμενες κάρτες, όπως στο παλιό site ── */}
+      <HeroSlides
+        slides={[
+          { title: "Ξηρός πάγος & CO₂", line: "Διανομή ξηρού πάγου πανελλαδικά, σε όλες τις μορφές και για όλες τις χρήσεις.", href: "/dianomi-xirou-pagou/", image: "/media/2017/10/Dry-Ice-Scoop.jpg" },
+          { title: "Ανασυσκευασία, μεταφορές, εξαγωγές", line: "Για ευαίσθητα προϊόντα που ταξιδεύουν σε ψύξη ή κατάψυξη.", href: "/anasyskeyasia-metafores-dry-ice-courier/", image: "/media/2017/09/Dry-Ice-Bucket.jpg" },
+          { title: "Αποστολές σε όλο τον κόσμο", line: "Από την πόρτα σου μέχρι την πόρτα του παραλήπτη.", href: "/dry-ice-courier-apostoles-paradoseis-exoterikoy/", image: "/media/2017/09/Dry-Ice-For-Food.jpg" },
+          { title: "Εφέ καπνού & χαμηλής ομίχλης", line: "Για γάμους, θέατρα, τηλεόραση, βιντεοκλίπ και παρουσιάσεις.", href: "/paragogi-efe-kapnou-omichlis-comfetti/", image: "/media/2017/11/Dry-ice-fog-effect-in-a-wedding-4.jpg" },
+          { title: "Καθαρισμός με παγοβολή", line: "Χωρίς νερό και χημικά, για επιφάνειες, αυτοκίνητα και βιομηχανικό εξοπλισμό.", href: "/katharismos-apolymansi-me-pagovoli/", image: "/media/2017/11/Dry-ice-blasting-for-industrial-cleaning.jpg" },
+        ]}
+      />
+      <QuickBar />
 
       {/* ── Services ─────────────────────────────────────── */}
       <Section id="ypiresies">
-        <SectionHead
-          title="Τι κάνουμε"
-          intro="Από ένα κουτί 10 κιλών για το εστιατόριο μέχρι εξαγωγές δειγμάτων σε άλλη ήπειρο: ο ξηρός πάγος φτάνει εκεί που πρέπει, στη θερμοκρασία που πρέπει."
-        />
-        <ServiceIndex items={services} />
+        <SectionHead title="Τι σου προσφέρουμε" />
+        <ServiceCards items={services} />
       </Section>
 
       {/* ── Applications ─────────────────────────────────── */}
@@ -76,7 +38,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
           <SectionHead
             title="Πού χρησιμοποιείται"
-            intro="Είσαι επαγγελματίας; Δες πώς δουλεύει ο ξηρός πάγος και το CO₂ στον κλάδο σου."
+            intro="Είσαι επαγγελματίας; Διάλεξε τον κλάδο σου."
             aside={
               <Link href="/efarmoges-xirou-pagou-dioxidiou/" className="inline-flex items-center gap-2 text-ember-2 hover:text-ember">
                 Όλες οι εφαρμογές <Icon name="arrow" size={16} />
@@ -103,24 +65,9 @@ export default function Home() {
 
       {/* ── Products ─────────────────────────────────────── */}
       <Section id="proionta">
-        <SectionHead title="Προϊόντα" intro="Ό,τι χρειάζεσαι για να παράγεις, να μεταφέρεις και να χρησιμοποιήσεις ξηρό πάγο, άζωτο και CO₂." />
-        <div className="grid gap-5 lg:grid-cols-3">
-          <Link href={featured.href} className="group relative overflow-hidden rounded-[28px] border frost-line lg:col-span-2 lg:row-span-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset(featured.image)} alt="Κοκτέιλ με ομίχλη από ξηρό πάγο" loading="lazy" className="aspect-[16/11] size-full object-cover transition-transform duration-700 ease-out-ice group-hover:scale-[1.03] lg:aspect-auto lg:absolute lg:inset-0" />
-            <div className="absolute inset-0 bg-gradient-to-t from-abyss via-abyss/30 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-7 sm:p-10">
-              <p className="text-sm text-ember-2">Για bars, clubs, εστιατόρια και δεξιώσεις</p>
-              <h3 className="display mt-2 text-[2.4rem] text-frost sm:text-[3.2rem]">{featured.title}</h3>
-              <p className="mt-3 max-w-[44ch] text-glacier-2">{featured.short}</p>
-            </div>
-          </Link>
-          {rest.slice(0, 2).map((p) => (
-            <ProductCard key={p.href} p={p} />
-          ))}
-        </div>
-        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.slice(2).map((p) => (
+        <SectionHead title="Τα προϊόντα μας" />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => (
             <ProductCard key={p.href} p={p} />
           ))}
         </div>
