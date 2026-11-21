@@ -9,12 +9,14 @@ export function PageHero({
   lead,
   crumbs,
   image,
+  imageAlt = "",
   meta,
 }: {
   title: string;
   lead?: string;
   crumbs: Crumb[];
   image?: string | null;
+  imageAlt?: string;
   meta?: React.ReactNode;
 }) {
   const ld = {
@@ -65,7 +67,7 @@ export function PageHero({
         {image && (
           <div className="overflow-hidden rounded-[28px] border frost-line">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset(image)} alt="" className="aspect-[4/3] w-full object-cover" />
+            <img src={asset(image)} alt={imageAlt} className="aspect-[4/3] w-full object-cover" />
           </div>
         )}
       </div>

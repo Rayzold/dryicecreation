@@ -38,6 +38,12 @@ function heroImageOf(p: Page): string | null {
   return curated(p.path)?.image || p.images[0]?.src || p.ogImage || null;
 }
 
+/** Το alt από το WordPress για μια εικόνα της σελίδας, αν υπάρχει· αλλιώς κενό (διακοσμητική). */
+function altOf(p: Page, src: string | null | undefined): string {
+  if (!src) return "";
+  return p.images.find((i) => i.src === src)?.alt.trim() ?? "";
+}
+
 function leadOf(p: Page): string {
   return p.description
     .split(/(?<=[.!;])\s+/)
@@ -134,7 +140,7 @@ function ArticleTemplate({ page }: { page: Page }) {
   const section = sectionOf(page.path);
   return (
     <>
-      <PageHero title={cleanTitle(page.title)} lead={leadOf(page)} crumbs={crumbsFor(page)} image={hero} />
+      <PageHero title={cleanTitle(page.title)} lead={leadOf(page)} crumbs={crumbsFor(page)} image={hero} imageAlt={altOf(page, hero)} />
       <Wrap className="grid gap-14 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_320px]">
         <article>
           <Prose html={stripImage(page.html, hero)} />
@@ -271,6 +277,7 @@ function AboutTemplate({ page }: { page: Page }) {
         lead="Η Dry Ice Creation ιδρύθηκε το 2013 για να καλύψει τις ανάγκες της αγοράς ξηρού πάγου στην Ελλάδα."
         crumbs={crumbsFor(page)}
         image="/media/2017/10/Dry-Ice-Scoop.jpg"
+        imageAlt="Σέσουλα γεμάτη pellets ξηρού πάγου"
       />
       <Wrap className="grid gap-14 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div>
@@ -367,7 +374,7 @@ function PostTemplate({ page }: { page: Page }) {
         <article className="mx-auto max-w-[760px]">
           {img && !hasVideo && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={asset(img)} alt="" className="mb-12 w-full rounded-[24px] border frost-line object-cover" />
+            <img src={asset(img)} alt={altOf(page, img)} className="mb-12 w-full rounded-[24px] border frost-line object-cover" />
           )}
           <Prose html={stripImage(page.html, img)} className="max-w-none" />
         </article>
