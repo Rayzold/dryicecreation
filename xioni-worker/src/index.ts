@@ -20,14 +20,14 @@ type ChatTurn = { role: "user" | "assistant"; text: string };
 type Quote = Record<string, string | number>;
 type Lang = "el" | "en";
 
-// Κωδικός αιτήματος που λέγεται εύκολα στο τηλέφωνο: δύο γράμματα, τρία ψηφία και ένα γράμμα, π.χ. «ΚΑ315Τ» (900.000 συνδυασμοί).
+// Κωδικός αιτήματος που λέγεται εύκολα στο τηλέφωνο: ένα γράμμα και δύο ψηφία, π.χ. «Α15» (900 συνδυασμοί).
+// Προσωρινός: ζει μόνο ώσπου να μιλήσει η εταιρεία με τον πελάτη (Μάρκος, 27/11), γι' αυτό αρκεί μικρός.
 // Μόνο γράμματα που είναι ίδια σε ελληνικά και λατινικά, για να μη μπερδεύεται όποιο πληκτρολόγιο κι αν έχει ο υπάλληλος.
 // Χωρίς αποθήκευση ακόμα (demo): μοναδικότητα δεν εγγυάται· στην παραγωγή ο κωδικός βγαίνει από το store των αιτημάτων.
 const CODE_LETTERS = "ΑΒΕΗΚΜΝΡΤΧ";
 function orderCode(): string {
-  const r = crypto.getRandomValues(new Uint32Array(4));
-  const L = CODE_LETTERS.length;
-  return CODE_LETTERS[r[0] % L] + CODE_LETTERS[r[1] % L] + String(100 + (r[2] % 900)) + CODE_LETTERS[r[3] % L];
+  const r = crypto.getRandomValues(new Uint32Array(2));
+  return CODE_LETTERS[r[0] % CODE_LETTERS.length] + String(10 + (r[1] % 90));
 }
 
 const LANG_HINT: Record<Lang, string> = {
