@@ -5,7 +5,16 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 ALLOWED_ORIGINS = "https://rayzold.github.io,http://localhost:3000,https://xioni-voice.ambrosia-preview.pages.dev"
+# Φωνή Madlen (ElevenLabs), προσωρινά στο πλάνο του Μάρκου για το demo (2026-11-27).
+# Το key: npx wrangler secret put ELEVENLABS_API_KEY · χωρίς αυτό το /tts απαντά 503 και η Χιόνη γράφει μόνο.
+TTS_VOICE_ID = "Jv2zcgjn9Qu0uNMKJjb1"
+TTS_DAILY_CHARS = "1000"
 # MODEL = "claude-haiku-5-5"   # φθηνότερη επιλογή· προεπιλογή claude-opus-5-5 με effort low
 
 # Το key ΔΕΝ μπαίνει εδώ: npx wrangler secret put ANTHROPIC_API_KEY
 # Χωρίς key ο Worker τρέχει σε demo mode.
+
+# Ήχοι της Madlen (ίδιο κείμενο → χωρίς δεύτερη χρέωση) και ο ημερήσιος μετρητής χαρακτήρων.
+[[kv_namespaces]]
+binding = "XIONI_TTS"
+id = "a33908782e434c74b08d27041131301e"

@@ -2,8 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
-// Φωνή για τη Χιόνη με το δωρεάν Web Speech API του browser (el-GR ή en-GB, ανάλογα με τη γλώσσα του widget).
-// Ακούει: SpeechRecognition (Chrome, Edge, Safari). Μιλάει: speechSynthesis (όλοι οι σύγχρονοι browsers).
+// Φωνή για τη Χιόνη.
+// Μιλάει: η Madlen (ElevenLabs) από το /tts του worker, με το ίδιο ηχείο σε κάθε συσκευή. Αν το /tts δεν απαντήσει
+// (όριο της μέρας, δίκτυο), η Χιόνη απλώς γράφει· δεν πέφτουμε σε φωνή του browser (ο Stefanos κόπηκε, 27/11).
+// Ακούει: SpeechRecognition του browser (Chrome, Edge, Safari).
 // Αν ο browser δεν υποστηρίζει αναγνώριση (π.χ. Firefox), το κουμπί του μικροφώνου απλώς δεν εμφανίζεται.
 
 type RecognitionResultEvent = { resultIndex: number; results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> };
@@ -29,16 +31,6 @@ function getRecognition(): RecognitionCtor | null {
 export type XioniLang = "el" | "en";
 const BCP47: Record<XioniLang, string> = { el: "el-GR", en: "en-GB" };
 
-// Η πιο φυσική φωνή της γλώσσας που έχει η συσκευή: πρώτα οι «natural/online», μετά Google/Microsoft, μετά ό,τι ταιριάζει.
-function pickVoice(lang: XioniLang): SpeechSynthesisVoice | null {
-  const voices = window.speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith(lang));
-  const score = (v: SpeechSynthesisVoice) => {
-    const n = v.name.toLowerCase();
-    return (n.includes("natural") || n.includes("online") ? 4 : 0) + (n.includes("google") ? 2 : 0) + (n.includes("microsoft") ? 1 : 0) + (n.includes("female") || n.includes("athina") || n.includes("sonia") || n.includes("libby") ? 1 : 0);
-  };
-  return voices.sort((a, b) => score(b) - score(a))[0] ?? null;
-}
-
 // Χωρίς emoji, markdown και URLs, που ακούγονται άσχημα.
 function speakable(text: string) {
   return text
@@ -49,67 +41,101 @@ function speakable(text: string) {
     .trim();
 }
 
+// Το /tts δέχεται έως 600 χαρακτήρες: κόβουμε στο τέλος της τελευταίας πρότασης που χωράει.
+const TTS_MAX = 600;
+function fitTts(text: string) {
+  if (text.length <= TTS_MAX) return text;
+  const cut = text.slice(0, TTS_MAX);
+  const end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("! "), cut.lastIndexOf("; "), cut.lastIndexOf("? "));
+  return end > 100 ? cut.slice(0, end + 1) : cut;
+}
+
+// Σιωπηλό WAV: παίζεται τη στιγμή του κλικ για να «ξεκλειδώσει» το ηχείο σε iOS/Safari.
+const SILENT_WAV = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
+
 const noSubscribe = () => () => {};
 
-export function useXioniVoice(lang: XioniLang = "el") {
+export function useXioniVoice(lang: XioniLang = "el", ttsUrl = "") {
   // Στο static HTML (server) δεν υπάρχει φωνή· στον browser ελέγχεται μετά το hydration.
   const canListen = useSyncExternalStore(noSubscribe, () => !!getRecognition(), () => false);
-  const canSpeak = useSyncExternalStore(noSubscribe, () => "speechSynthesis" in window, () => false);
+  const canSpeak = useSyncExternalStore(noSubscribe, () => !!ttsUrl && typeof Audio !== "undefined", () => false);
   const [listening, setListening] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [interim, setInterim] = useState("");
   // Η φωνή ανοίγει μόνη της μόλις ο πελάτης μιλήσει, και κλείνει/ανοίγει με το κουμπί του ηχείου.
   const [voiceOn, setVoiceOn] = useState(false);
   const recRef = useRef<Recognition | null>(null);
+  // Ένα ηχείο για όλη τη συζήτηση (το ξεκλειδωμένο στο iOS), και αριθμός εκφώνησης ώστε μια παλιά
+  // απάντηση που αργεί να φτάσει να μη μιλήσει πάνω από νεότερη ή μετά το «σταμάτα».
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const urlRef = useRef<string | null>(null);
+  const seqRef = useRef(0);
+
+  const player = useCallback(() => {
+    if (!audioRef.current) {
+      const a = new Audio();
+      a.onplaying = () => setSpeaking(true);
+      a.onended = () => setSpeaking(false);
+      a.onpause = () => setSpeaking(false);
+      a.onerror = () => setSpeaking(false);
+      audioRef.current = a;
+    }
+    return audioRef.current;
+  }, []);
 
   useEffect(() => {
-    const synth = "speechSynthesis" in window;
-    if (synth) {
-      // Σε Chrome οι φωνές φορτώνουν ασύγχρονα.
-      window.speechSynthesis.getVoices();
-      window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-    }
     return () => {
       recRef.current?.abort();
-      if (synth) window.speechSynthesis.cancel();
+      audioRef.current?.pause();
+      if (urlRef.current) URL.revokeObjectURL(urlRef.current);
     };
   }, []);
 
   const stopSpeaking = useCallback(() => {
-    if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+    seqRef.current++;
+    audioRef.current?.pause();
     setSpeaking(false);
   }, []);
 
   const speak = useCallback(
     (text: string, as: XioniLang = lang) => {
       if (!canSpeak) return;
-      const clean = speakable(text);
+      const clean = fitTts(speakable(text));
       if (!clean) return;
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(clean);
-      u.lang = BCP47[as];
-      // Χωρίς φωνή της γλώσσας στη συσκευή η Χιόνη δεν μιλά: μια αγγλική φωνή που διαβάζει ελληνικά ακούγεται χειρότερα από τη σιωπή.
-      const v = pickVoice(as);
-      if (!v) return;
-      u.voice = v;
-      u.rate = 1.02;
-      u.pitch = 1.08;
-      u.onstart = () => setSpeaking(true);
-      u.onend = () => setSpeaking(false);
-      u.onerror = () => setSpeaking(false);
-      window.speechSynthesis.speak(u);
+      const seq = ++seqRef.current;
+      audioRef.current?.pause();
+      void (async () => {
+        try {
+          const res = await fetch(`${ttsUrl}/tts`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: clean, lang: as }),
+          });
+          if (!res.ok || seq !== seqRef.current) return;
+          const blob = await res.blob();
+          if (seq !== seqRef.current) return;
+          const a = player();
+          if (urlRef.current) URL.revokeObjectURL(urlRef.current);
+          urlRef.current = URL.createObjectURL(blob);
+          a.src = urlRef.current;
+          await a.play();
+        } catch {
+          setSpeaking(false);
+        }
+      })();
     },
-    [canSpeak, lang],
+    [canSpeak, lang, ttsUrl, player],
   );
 
-  // iOS/Safari μιλάει μόνο αν η πρώτη εκφώνηση ξεκινήσει από άγγιγμα του χρήστη.
-  // Μια σιωπηλή εκφώνηση τη στιγμή του κλικ «ξεκλειδώνει» τις επόμενες, που έρχονται μετά το fetch.
+  // iOS/Safari παίζει ήχο μόνο αν το ηχείο ξεκίνησε από άγγιγμα του χρήστη.
+  // Ένα σιωπηλό WAV τη στιγμή του κλικ το «ξεκλειδώνει» για τις επόμενες εκφωνήσεις, που έρχονται μετά το fetch.
   const unlockAudio = useCallback(() => {
     if (!canSpeak) return;
-    const u = new SpeechSynthesisUtterance(" ");
-    u.volume = 0;
-    window.speechSynthesis.speak(u);
-  }, [canSpeak]);
+    const a = player();
+    if (a.src && !a.paused) return;
+    a.src = SILENT_WAV;
+    a.play().catch(() => {});
+  }, [canSpeak, player]);
 
   const stopListening = useCallback(() => {
     recRef.current?.stop();

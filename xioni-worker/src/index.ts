@@ -1,5 +1,6 @@
 // Η Χιόνη του site: Cloudflare Worker που κρατά κρυφό το API key και μιλά με το Claude.
 // POST /chat  { messages: [{ role: "user"|"assistant", text: string }], lang?: "el"|"en" }  ->  { reply, quote? }
+// POST /tts   { text, lang? }  ->  audio/mpeg με τη φωνή Madlen (ElevenLabs), με ημερήσιο όριο χαρακτήρων.
 // Χωρίς ANTHROPIC_API_KEY τρέχει σε demo mode με έτοιμες απαντήσεις, για να φαίνεται το widget.
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -9,6 +10,10 @@ export interface Env {
   ANTHROPIC_API_KEY?: string;
   ALLOWED_ORIGINS: string; // comma-separated
   MODEL?: string;
+  ELEVENLABS_API_KEY?: string;
+  TTS_VOICE_ID?: string;
+  TTS_DAILY_CHARS?: string;
+  XIONI_TTS?: KVNamespace;
 }
 
 type ChatTurn = { role: "user" | "assistant"; text: string };
@@ -206,11 +211,70 @@ function demoReply(turns: ChatTurn[], lang: Lang): { reply: string; quote?: Quot
   };
 }
 
+// --- Φωνή (Madlen) ---
+const TTS_MODEL = "eleven_v4";
+const TTS_MAX_TEXT = 600;
+const DAY = 86400;
+
+async function sha256(text: string) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function audio(body: ArrayBuffer, headers: Record<string, string>, cached: boolean) {
+  return new Response(body, { status: 200, headers: { ...headers, "Content-Type": "audio/mpeg", "X-Xioni-Cache": cached ? "hit" : "miss" } });
+}
+
+async function tts(request: Request, env: Env, headers: Record<string, string>): Promise<Response> {
+  if (!env.ELEVENLABS_API_KEY || !env.TTS_VOICE_ID || !env.XIONI_TTS) return json({ error: "tts off" }, 503, headers);
+  // Μόνο από τα sites μας: όχι τέλεια προστασία (το Origin πλαστογραφείται), γι' αυτό υπάρχει και το ημερήσιο όριο.
+  const origin = request.headers.get("Origin");
+  if (!origin || !env.ALLOWED_ORIGINS.split(",").map((s) => s.trim()).includes(origin)) return json({ error: "forbidden" }, 403, headers);
+
+  let body: { text?: unknown };
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: "bad json" }, 400, headers);
+  }
+  const text = typeof body.text === "string" ? body.text.trim() : "";
+  if (!text) return json({ error: "empty" }, 400, headers);
+  if (text.length > TTS_MAX_TEXT) return json({ error: "too long" }, 413, headers);
+
+  const kv = env.XIONI_TTS;
+  const key = "a:" + (await sha256(`${env.TTS_VOICE_ID}|${TTS_MODEL}|${text}`));
+  const hit = await kv.get(key, "arrayBuffer");
+  if (hit) return audio(hit, headers, true);
+
+  // Ο μετρητής δεν είναι ατομικός (KV): σε ταυτόχρονα αιτήματα μπορεί να περάσει λίγο το όριο. Για demo αρκεί.
+  const cap = Number(env.TTS_DAILY_CHARS || "1000");
+  const countKey = "c:" + new Date().toISOString().slice(0, 10);
+  const used = Number((await kv.get(countKey)) || "0");
+  if (used + text.length > cap) return json({ error: "daily limit" }, 429, headers);
+
+  const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${env.TTS_VOICE_ID}?output_format=mp3_44100_64`, {
+    method: "POST",
+    headers: { "xi-api-key": env.ELEVENLABS_API_KEY, "Content-Type": "application/json", Accept: "audio/mpeg" },
+    body: JSON.stringify({ text, model_id: TTS_MODEL }),
+  });
+  if (!res.ok) {
+    console.error("xioni tts", res.status, (await res.text()).slice(0, 200));
+    return json({ error: "tts failed" }, 502, headers);
+  }
+  const mp3 = await res.arrayBuffer();
+  await Promise.all([
+    kv.put(countKey, String(used + text.length), { expirationTtl: 2 * DAY }),
+    kv.put(key, mp3, { expirationTtl: 30 * DAY }),
+  ]);
+  return audio(mp3, headers, false);
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const headers = cors(request.headers.get("Origin"), env);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers });
     const url = new URL(request.url);
+    if (request.method === "POST" && url.pathname === "/tts") return tts(request, env, headers);
     if (request.method !== "POST" || url.pathname !== "/chat") return json({ error: "not found" }, 404, headers);
 
     let body: { messages?: unknown; lang?: unknown };

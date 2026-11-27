@@ -87,7 +87,7 @@ export function XioniChat() {
   const [busy, setBusy] = useState(false);
   const [quote, setQuote] = useState<Quote | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
-  const voice = useXioniVoice(lang);
+  const voice = useXioniVoice(lang, URL_);
   const t = T[lang];
 
   useEffect(() => {
@@ -128,6 +128,7 @@ export function XioniChat() {
     setOpen(true);
     if (!voice.canSpeak) return;
     voice.setVoiceOn(true);
+    voice.unlockAudio(); // μέσα στο κλικ, για το iOS· ο ήχος της Madlen φτάνει μετά το fetch
     voice.speak(turns.length === 1 ? T[l].greeting : turns[turns.length - 1].text, l);
   }
 
