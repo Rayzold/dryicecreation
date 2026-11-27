@@ -309,7 +309,7 @@ export function XioniChat() {
             setOpen(true);
           }}
           aria-expanded={open}
-          className="flex items-center gap-2 rounded-full bg-ember px-5 py-3 font-semibold text-abyss shadow-xl hover:bg-ember-2"
+          className={`flex items-center gap-2 rounded-full bg-ember px-5 py-3 font-semibold text-abyss shadow-xl hover:bg-ember-2${open ? "" : " frost-launcher"}`}
         >
           <Icon name={open ? "close" : "snowflake"} size={18} />
           {open ? t.close : t.launcher}
