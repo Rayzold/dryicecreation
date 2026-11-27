@@ -173,8 +173,9 @@
 }
 /* Περιοχή 72×76 γύρω από τον κύκλο (56 px, κέντρο στο 36,48): ελεύθερη πάνω από το κέντρο, κύκλος από κάτω. */
 .xioni-clip {
-  left: -8px; top: -20px; width: 72px; height: 76px;
-  clip-path: path("M0 0H72V48H63A27 27 0 0 1 9 48H0Z");
+  /* 1,7× το αρχικό (72×76): το κεφάλι βγαίνει πάνω από τον κύκλο, το σώμα κόβεται στο κάτω μισό του. */
+  left: -14px; top: -34px; width: 123px; height: 129px;
+  clip-path: path("M0 0H123V82H109A47.5 47.5 0 0 1 14 82H0Z");
 }
 @keyframes xioni-waddle {
   0%, 100% { transform: rotate(-4.5deg); }
@@ -186,7 +187,7 @@
 }
 @keyframes xioni-hop {
   0%, 70%, 78%, 100% { transform: translateY(0); }
-  74% { transform: translateY(-5px); }
+  74% { transform: translateY(-8px); }
 }
 .xioni-hop { animation: xioni-hop 9s ease-in-out infinite; }
 /* Το «Πάτησέ με» μένει κρυφό και φαίνεται για ~2″ κάθε 9″, μαζί με τον χαιρετισμό του πιγκουίνου.

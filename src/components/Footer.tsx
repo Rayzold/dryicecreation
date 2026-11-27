@@ -51,11 +51,29 @@ export function Footer() {
         </div>
       </div>
 
+      {/* pb-40: χώρος για τη Χιόνη (κύκλος + κεφάλι ~150px), ώστε στο τέλος της σελίδας να μη σκεπάζει τίποτα. */}
       <div className="border-t frost-line">
-        <div className="mx-auto flex max-w-[1320px] flex-col gap-4 px-4 py-6 text-sm text-glacier sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>
-            © <span className="num">{year}</span> {business.legalName}
-          </p>
+        <div className="mx-auto flex max-w-[1320px] flex-col gap-4 px-4 pt-6 pb-40 text-sm text-glacier sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <div className="flex flex-wrap items-center gap-4">
+            <ul className="flex gap-2">
+              {business.social.map((s) => (
+                <li key={s.name}>
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={s.name}
+                    className={`grid size-10 place-items-center rounded-full text-white transition hover:brightness-110 ${brandBg[s.name] ?? "bg-vapor"}`}
+                  >
+                    <Icon name={socialIcon[s.name]} size={18} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p>
+              © <span className="num">{year}</span> {business.legalName}
+            </p>
+          </div>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {footerLinks.slice(6).map((l) => (
               <li key={l.href}>
@@ -65,26 +83,20 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <ul className="flex gap-2">
-            {business.social.map((s) => (
-              <li key={s.name}>
-                <a
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={s.name}
-                  className="grid size-10 place-items-center rounded-full border frost-line text-glacier-2 transition hover:border-ember hover:text-ember"
-                >
-                  <Icon name={socialIcon[s.name]} size={18} />
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </footer>
   );
 }
+
+/* Τα social με τα χρώματα των brands τους, για να ξεχωρίζουν· λευκό εικονίδιο (contrast ≥ 4:1). */
+const brandBg: Record<string, string> = {
+  Facebook: "bg-[#1877F2]",
+  YouTube: "bg-[#FF0000]",
+  LinkedIn: "bg-[#0A66C2]",
+  // Το X είναι μαύρο· το λεπτό περίγραμμα το κρατά ορατό στο σκούρο φόντο.
+  "X / Twitter": "bg-black ring-1 ring-white/30",
+};
 
 function FooterCol({ title, items }: { title: string; items: { title: string; href: string }[] }) {
   return (

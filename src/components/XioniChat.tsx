@@ -284,10 +284,10 @@ export function XioniChat() {
       )}
       <div className="flex items-end gap-2">
         {!open && (
-          <button type="button" onClick={openWithGreeting} aria-label={t.penguin} className="group relative mb-1 size-14 rounded-full">
+          <button type="button" onClick={openWithGreeting} aria-label={t.penguin} className="group relative mb-1 size-[95px] rounded-full">
             <span
               aria-hidden="true"
-              className="xioni-bubble pointer-events-none absolute -top-12 right-0 whitespace-nowrap rounded-2xl rounded-br-sm bg-frost px-3 py-1 text-xs font-semibold text-abyss shadow-lg"
+              className="xioni-bubble pointer-events-none absolute -top-[4.75rem] right-0 whitespace-nowrap rounded-2xl rounded-br-sm bg-frost px-3 py-1 text-xs font-semibold text-abyss shadow-lg"
             >
               {t.poke}
             </span>
@@ -296,7 +296,7 @@ export function XioniChat() {
             <span aria-hidden="true" className="xioni-clip pointer-events-none absolute">
               <span className="xioni-hop absolute inset-0">
                 {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
-                <img src={asset("/xioni-cutout.webp")} alt="" width={56} height={63} className="xioni-waddle absolute bottom-[6px] left-[8px] h-[63px] w-[56px]" />
+                <img src={asset("/xioni-cutout.webp")} alt="" width={95} height={107} className="xioni-waddle absolute bottom-[10px] left-[14px] h-[107px] w-[95px]" />
               </span>
             </span>
           </button>
