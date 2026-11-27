@@ -88,8 +88,10 @@ export function useXioniVoice(lang: XioniLang = "el") {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(clean);
       u.lang = BCP47[as];
+      // Χωρίς φωνή της γλώσσας στη συσκευή η Χιόνη δεν μιλά: μια αγγλική φωνή που διαβάζει ελληνικά ακούγεται χειρότερα από τη σιωπή.
       const v = pickVoice(as);
-      if (v) u.voice = v;
+      if (!v) return;
+      u.voice = v;
       u.rate = 1.02;
       u.pitch = 1.08;
       u.onstart = () => setSpeaking(true);

@@ -94,13 +94,14 @@ export function XioniChat() {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [turns, busy, quote, voice.interim]);
 
-  // Στο πρώτο άνοιγμα: browser σε άλλη γλώσσα → η Χιόνη ξεκινά στα αγγλικά.
+  // Στο πρώτο άνοιγμα η Χιόνη ακολουθεί τη γλώσσα της σελίδας (<html lang>), όχι του browser:
+  // στο ελληνικό site μιλά ελληνικά, και τα αγγλικά είναι επιλογή από τον διακόπτη.
   // Όχι στο φόρτωμα, για να ταιριάζει το static HTML με το hydration.
   const detected = useRef(false);
   function firstLang(): XioniLang {
     if (detected.current) return lang;
     detected.current = true;
-    const l: XioniLang = navigator.language.toLowerCase().startsWith("el") ? "el" : "en";
+    const l: XioniLang = document.documentElement.lang.toLowerCase().startsWith("en") ? "en" : "el";
     if (l !== lang) switchLang(l);
     return l;
   }
