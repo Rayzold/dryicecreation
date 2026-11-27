@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
-// Φωνή για τη Χιόνη με το δωρεάν Web Speech API του browser (el-GR).
+// Φωνή για τη Χιόνη με το δωρεάν Web Speech API του browser (el-GR ή en-GB, ανάλογα με τη γλώσσα του widget).
 // Ακούει: SpeechRecognition (Chrome, Edge, Safari). Μιλάει: speechSynthesis (όλοι οι σύγχρονοι browsers).
 // Αν ο browser δεν υποστηρίζει αναγνώριση (π.χ. Firefox), το κουμπί του μικροφώνου απλώς δεν εμφανίζεται.
 
@@ -26,12 +26,15 @@ function getRecognition(): RecognitionCtor | null {
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 }
 
-// Η πιο φυσική ελληνική φωνή που έχει η συσκευή: πρώτα οι «natural/online», μετά Google/Microsoft, μετά ό,τι el.
-function pickGreekVoice(): SpeechSynthesisVoice | null {
-  const voices = window.speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("el"));
+export type XioniLang = "el" | "en";
+const BCP47: Record<XioniLang, string> = { el: "el-GR", en: "en-GB" };
+
+// Η πιο φυσική φωνή της γλώσσας που έχει η συσκευή: πρώτα οι «natural/online», μετά Google/Microsoft, μετά ό,τι ταιριάζει.
+function pickVoice(lang: XioniLang): SpeechSynthesisVoice | null {
+  const voices = window.speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith(lang));
   const score = (v: SpeechSynthesisVoice) => {
     const n = v.name.toLowerCase();
-    return (n.includes("natural") || n.includes("online") ? 4 : 0) + (n.includes("google") ? 2 : 0) + (n.includes("microsoft") ? 1 : 0) + (n.includes("female") || n.includes("athina") ? 1 : 0);
+    return (n.includes("natural") || n.includes("online") ? 4 : 0) + (n.includes("google") ? 2 : 0) + (n.includes("microsoft") ? 1 : 0) + (n.includes("female") || n.includes("athina") || n.includes("sonia") || n.includes("libby") ? 1 : 0);
   };
   return voices.sort((a, b) => score(b) - score(a))[0] ?? null;
 }
@@ -48,7 +51,7 @@ function speakable(text: string) {
 
 const noSubscribe = () => () => {};
 
-export function useXioniVoice() {
+export function useXioniVoice(lang: XioniLang = "el") {
   // Στο static HTML (server) δεν υπάρχει φωνή· στον browser ελέγχεται μετά το hydration.
   const canListen = useSyncExternalStore(noSubscribe, () => !!getRecognition(), () => false);
   const canSpeak = useSyncExternalStore(noSubscribe, () => "speechSynthesis" in window, () => false);
@@ -78,14 +81,14 @@ export function useXioniVoice() {
   }, []);
 
   const speak = useCallback(
-    (text: string) => {
+    (text: string, as: XioniLang = lang) => {
       if (!canSpeak) return;
       const clean = speakable(text);
       if (!clean) return;
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(clean);
-      u.lang = "el-GR";
-      const v = pickGreekVoice();
+      u.lang = BCP47[as];
+      const v = pickVoice(as);
       if (v) u.voice = v;
       u.rate = 1.02;
       u.pitch = 1.08;
@@ -94,7 +97,7 @@ export function useXioniVoice() {
       u.onerror = () => setSpeaking(false);
       window.speechSynthesis.speak(u);
     },
-    [canSpeak],
+    [canSpeak, lang],
   );
 
   // iOS/Safari μιλάει μόνο αν η πρώτη εκφώνηση ξεκινήσει από άγγιγμα του χρήστη.
@@ -117,7 +120,7 @@ export function useXioniVoice() {
     stopSpeaking();
     unlockAudio();
     const rec = new Ctor();
-    rec.lang = "el-GR";
+    rec.lang = BCP47[lang];
     rec.interimResults = true;
     rec.continuous = false;
     let finalText = "";
@@ -149,7 +152,7 @@ export function useXioniVoice() {
     } catch {
       setListening(false);
     }
-  }, [listening, stopSpeaking, unlockAudio]);
+  }, [listening, stopSpeaking, unlockAudio, lang]);
 
   return { canListen, canSpeak, listening, speaking, interim, voiceOn, setVoiceOn, startListening, stopListening, speak, stopSpeaking, unlockAudio };
 }

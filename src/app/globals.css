@@ -157,3 +157,22 @@
   text-align: left;
 }
 .prose-ice iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border-radius: 14px; }
+
+/* Χιόνη: το πιγκουινάκι κάτω δεξιά ταλαντεύεται απαλά και κάθε λίγο «χαιρετά» με μια κλίση.
+   Με prefers-reduced-motion μένει ακίνητο (κανόνας πιο πάνω). */
+@keyframes xioni-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(0deg); }
+  80% { transform: translateY(0) rotate(-9deg); }
+  86% { transform: translateY(0) rotate(7deg); }
+  92% { transform: translateY(0) rotate(-4deg); }
+}
+.xioni-bob {
+  animation: xioni-bob 4.5s ease-in-out infinite;
+  transform-origin: 50% 90%;
+}
+@keyframes xioni-bubble {
+  0%, 70%, 100% { transform: translateY(0); }
+  80% { transform: translateY(-3px); }
+}
+.xioni-bubble { animation: xioni-bubble 4.5s ease-in-out infinite; }

@@ -1,5 +1,5 @@
 // Η Χιόνη του site: Cloudflare Worker που κρατά κρυφό το API key και μιλά με το Claude.
-// POST /chat  { messages: [{ role: "user"|"assistant", text: string }] }  ->  { reply, quote? }
+// POST /chat  { messages: [{ role: "user"|"assistant", text: string }], lang?: "el"|"en" }  ->  { reply, quote? }
 // Χωρίς ANTHROPIC_API_KEY τρέχει σε demo mode με έτοιμες απαντήσεις, για να φαίνεται το widget.
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -13,6 +13,37 @@ export interface Env {
 
 type ChatTurn = { role: "user" | "assistant"; text: string };
 type Quote = Record<string, string | number>;
+type Lang = "el" | "en";
+
+// Κωδικός αιτήματος που λέγεται εύκολα στο τηλέφωνο: δύο γράμματα, τρία ψηφία και ένα γράμμα, π.χ. «ΚΑ315Τ» (900.000 συνδυασμοί).
+// Μόνο γράμματα που είναι ίδια σε ελληνικά και λατινικά, για να μη μπερδεύεται όποιο πληκτρολόγιο κι αν έχει ο υπάλληλος.
+// Χωρίς αποθήκευση ακόμα (demo): μοναδικότητα δεν εγγυάται· στην παραγωγή ο κωδικός βγαίνει από το store των αιτημάτων.
+const CODE_LETTERS = "ΑΒΕΗΚΜΝΡΤΧ";
+function orderCode(): string {
+  const r = crypto.getRandomValues(new Uint32Array(4));
+  const L = CODE_LETTERS.length;
+  return CODE_LETTERS[r[0] % L] + CODE_LETTERS[r[1] % L] + String(100 + (r[2] % 900)) + CODE_LETTERS[r[3] % L];
+}
+
+const LANG_HINT: Record<Lang, string> = {
+  el: "Η σελίδα είναι στα ελληνικά. Απάντα στα ελληνικά, εκτός αν ο πελάτης γράφει σε άλλη γλώσσα.",
+  en: "The page is in English. Reply in English unless the customer writes in Greek.",
+};
+
+const FALLBACK: Record<Lang, { refusal: string; again: string; phone: string; error: string }> = {
+  el: {
+    refusal: "Συγγνώμη, σε αυτό δεν μπορώ να βοηθήσω. Για οτιδήποτε άλλο, καλέστε μας στο 213 029 1900.",
+    again: "Μπορείτε να μου το ξαναπείτε;",
+    phone: "Ας το συνεχίσουμε στο τηλέφωνο: 213 029 1900.",
+    error: "Δεν μπόρεσα να απαντήσω τώρα. Καλέστε μας στο 213 029 1900.",
+  },
+  en: {
+    refusal: "Sorry, I can't help with that. For anything else, call us on +30 213 029 1900.",
+    again: "Could you say that again?",
+    phone: "Let's continue on the phone: +30 213 029 1900.",
+    error: "I couldn't answer just now. Please call us on +30 213 029 1900.",
+  },
+};
 
 const MAX_TURNS = 30;
 const MAX_CHARS = 1500;
@@ -38,7 +69,7 @@ const tools: Anthropic.Tool[] = [
   {
     name: "create_quote_request",
     description:
-      "Καταχωρεί αίτημα προσφοράς ή παραγγελίας όταν έχεις όλα τα στοιχεία. Μετά πες στον πελάτη ότι θα τον καλέσει η εταιρεία.",
+      "Καταχωρεί αίτημα προσφοράς ή παραγγελίας όταν έχεις όλα τα στοιχεία. Μετά πες στον πελάτη τον κωδικό (ref) του αιτήματος.",
     input_schema: {
       type: "object",
       properties: {
@@ -92,13 +123,13 @@ function runTool(name: string, input: unknown): { content: string; quote?: Quote
   }
   if (name === "create_quote_request") {
     // Demo: δεν στέλνεται email. Στην παραγωγή εδώ μπαίνει αποστολή (Resend) και γραμμή στο Google Sheet.
-    const quote = { ...(input as Quote), ref: `DIC-${Date.now().toString(36).toUpperCase()}` };
+    const quote = { ...(input as Quote), ref: orderCode() };
     return { content: JSON.stringify({ ok: true, ref: quote.ref, demo: true }), quote };
   }
   return { content: JSON.stringify({ error: `unknown tool ${name}` }) };
 }
 
-async function chat(turns: ChatTurn[], env: Env): Promise<{ reply: string; quote?: Quote }> {
+async function chat(turns: ChatTurn[], lang: Lang, env: Env): Promise<{ reply: string; quote?: Quote }> {
   const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
   const messages: Anthropic.Beta.BetaMessageParam[] = turns.map((t) => ({ role: t.role, content: t.text }));
   let quote: Quote | undefined;
@@ -107,7 +138,10 @@ async function chat(turns: ChatTurn[], env: Env): Promise<{ reply: string; quote
     const response = await client.beta.messages.create({
       model: env.MODEL || "claude-opus-5-5",
       max_tokens: 2048,
-      system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
+      system: [
+        { type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
+        { type: "text", text: LANG_HINT[lang] },
+      ],
       output_config: { effort: "low" },
       tools,
       messages,
@@ -116,7 +150,7 @@ async function chat(turns: ChatTurn[], env: Env): Promise<{ reply: string; quote
     });
 
     if (response.stop_reason === "refusal") {
-      return { reply: "Συγγνώμη, σε αυτό δεν μπορώ να βοηθήσω. Για οτιδήποτε άλλο, καλέστε μας στο 213 029 1900.", quote };
+      return { reply: FALLBACK[lang].refusal, quote };
     }
 
     const text = response.content
@@ -129,7 +163,7 @@ async function chat(turns: ChatTurn[], env: Env): Promise<{ reply: string; quote
     );
 
     if (response.stop_reason !== "tool_use" || toolUses.length === 0) {
-      return { reply: text || "Μπορείτε να μου το ξαναπείτε;", quote };
+      return { reply: text || FALLBACK[lang].again, quote };
     }
 
     messages.push({ role: "assistant", content: response.content });
@@ -140,22 +174,35 @@ async function chat(turns: ChatTurn[], env: Env): Promise<{ reply: string; quote
     });
     messages.push({ role: "user", content: results });
   }
-  return { reply: "Ας το συνεχίσουμε στο τηλέφωνο: 213 029 1900.", quote };
+  return { reply: FALLBACK[lang].phone, quote };
 }
 
 // Demo mode: χωρίς API key, έτοιμες απαντήσεις ώστε να φαίνεται η ροή.
-function demoReply(turns: ChatTurn[]): { reply: string; quote?: Quote } {
+function demoReply(turns: ChatTurn[], lang: Lang): { reply: string; quote?: Quote } {
   const userTurns = turns.filter((t) => t.role === "user").length;
-  const script = [
-    "Γεια σας, είμαι η Χιόνη! Τι μορφή ξηρού πάγου χρειάζεστε: pellets 3 mm, 16 mm ή blocks;",
-    "Τέλεια. Πόσα κιλά περίπου; Αν δεν ξέρετε, πείτε μου τη χρήση και θα το υπολογίσω.",
-    "Για ποια ημερομηνία και σε ποια περιοχή να γίνει η παράδοση;",
-    "Τελευταίο: ένα όνομα και ένα τηλέφωνο για να σας καλέσουμε.",
-  ];
-  if (userTurns <= script.length) return { reply: script[userTurns - 1] };
+  const script: Record<Lang, string[]> = {
+    el: [
+      "Γεια σας, είμαι η Χιόνη! Τι μορφή ξηρού πάγου χρειάζεστε: pellets 3 mm, 16 mm ή blocks;",
+      "Τέλεια. Πόσα κιλά περίπου; Αν δεν ξέρετε, πείτε μου τη χρήση και θα το υπολογίσω.",
+      "Για ποια ημερομηνία και σε ποια περιοχή να γίνει η παράδοση;",
+      "Τελευταίο: ένα όνομα και ένα τηλέφωνο για να σας καλέσουμε.",
+    ],
+    en: [
+      "Hello, I'm Xioni! Which form of dry ice do you need: 3 mm pellets, 16 mm pellets or blocks?",
+      "Great. Roughly how many kilos? If you're not sure, tell me what it's for and I'll work it out.",
+      "For which date, and where should we deliver?",
+      "Last thing: a name and a phone number so we can call you.",
+    ],
+  };
+  const lines = script[lang];
+  if (userTurns <= lines.length) return { reply: lines[userTurns - 1] };
+  const ref = orderCode();
   return {
-    reply: "Ευχαριστώ! Καταχώρησα το αίτημά σας και η εταιρεία θα σας καλέσει σύντομα. (demo, χωρίς σύνδεση με AI)",
-    quote: { ref: "DIC-DEMO", demo: "true" },
+    reply:
+      lang === "en"
+        ? `Thank you! Your request code is ${ref}. If you call us, just give this code. (demo, no AI connection)`
+        : `Ευχαριστώ! Ο κωδικός του αιτήματός σας είναι ${ref}. Αν μας καλέσετε, αρκεί να πείτε αυτόν τον κωδικό. (demo, χωρίς σύνδεση με AI)`,
+    quote: { ref, demo: "true" },
   };
 }
 
@@ -166,7 +213,7 @@ export default {
     const url = new URL(request.url);
     if (request.method !== "POST" || url.pathname !== "/chat") return json({ error: "not found" }, 404, headers);
 
-    let body: { messages?: unknown };
+    let body: { messages?: unknown; lang?: unknown };
     try {
       body = await request.json();
     } catch {
@@ -174,15 +221,16 @@ export default {
     }
     const turns = validTurns(body.messages);
     if (!turns) return json({ error: "bad messages" }, 400, headers);
+    const lang: Lang = body.lang === "en" ? "en" : "el";
 
-    if (!env.ANTHROPIC_API_KEY) return json({ ...demoReply(turns), mode: "demo" }, 200, headers);
+    if (!env.ANTHROPIC_API_KEY) return json({ ...demoReply(turns, lang), mode: "demo" }, 200, headers);
 
     try {
-      return json({ ...(await chat(turns, env)), mode: "ai" }, 200, headers);
+      return json({ ...(await chat(turns, lang, env)), mode: "ai" }, 200, headers);
     } catch (error) {
       const status = error instanceof Anthropic.RateLimitError ? 429 : 502;
       console.error("xioni", error instanceof Anthropic.APIError ? `${error.status} ${error.message}` : error);
-      return json({ reply: "Κάτι δεν πήγε καλά. Καλέστε μας στο 213 029 1900.", error: true }, status, headers);
+      return json({ reply: FALLBACK[lang].error, error: true }, status, headers);
     }
   },
 };
