@@ -171,8 +171,10 @@
   animation: xioni-bob 4.5s ease-in-out infinite;
   transform-origin: 50% 90%;
 }
+/* Το «Πάτησέ με» μένει κρυφό και φαίνεται για ~2″ κάθε 9″, μαζί με τον χαιρετισμό του πιγκουίνου.
+   Με prefers-reduced-motion δεν τρέχει animation και μένει απλώς ορατό. */
 @keyframes xioni-bubble {
-  0%, 70%, 100% { transform: translateY(0); }
-  80% { transform: translateY(-3px); }
+  0%, 68%, 96%, 100% { opacity: 0; transform: translateY(4px); }
+  73%, 90% { opacity: 1; transform: translateY(0); }
 }
-.xioni-bubble { animation: xioni-bubble 4.5s ease-in-out infinite; }
+.xioni-bubble { animation: xioni-bubble 9s ease-in-out infinite; }
