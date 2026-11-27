@@ -284,21 +284,21 @@ export function XioniChat() {
       )}
       <div className="flex items-end gap-2">
         {!open && (
-          <button type="button" onClick={openWithGreeting} aria-label={t.penguin} className="group relative mb-1 rounded-full">
+          <button type="button" onClick={openWithGreeting} aria-label={t.penguin} className="group relative mb-1 size-14 rounded-full">
             <span
               aria-hidden="true"
-              className="xioni-bubble pointer-events-none absolute -top-9 right-0 whitespace-nowrap rounded-2xl rounded-br-sm bg-frost px-3 py-1 text-xs font-semibold text-abyss shadow-lg"
+              className="xioni-bubble pointer-events-none absolute -top-12 right-0 whitespace-nowrap rounded-2xl rounded-br-sm bg-frost px-3 py-1 text-xs font-semibold text-abyss shadow-lg"
             >
               {t.poke}
             </span>
-            {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
-            <img
-              src={asset("/xioni-avatar.webp")}
-              alt=""
-              width={56}
-              height={56}
-              className="xioni-bob size-14 rounded-full shadow-xl ring-2 ring-ember group-hover:ring-ember-2"
-            />
+            {/* Ακίνητος κύκλος με λάμψη· η Χιόνη στέκεται μέσα του και το κεφάλι της βγαίνει από πάνω. */}
+            <span aria-hidden="true" className="xioni-disc absolute inset-0 rounded-full ring-2 ring-ember group-hover:ring-ember-2" />
+            <span aria-hidden="true" className="xioni-clip pointer-events-none absolute">
+              <span className="xioni-hop absolute inset-0">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static export, images unoptimized */}
+                <img src={asset("/xioni-cutout.webp")} alt="" width={56} height={63} className="xioni-waddle absolute bottom-[6px] left-[8px] h-[63px] w-[56px]" />
+              </span>
+            </span>
           </button>
         )}
         <button
